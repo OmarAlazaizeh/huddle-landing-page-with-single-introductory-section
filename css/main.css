@@ -1,0 +1,156 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 
+  headin
+  font-family: 'Poppins', sans-serif;
+
+  body
+  font-family: 'Open Sans', sans-serif;
+*/
+
+body {
+  background-image: url(../images/bg-desktop.svg);
+  /* background-size: contain; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vb - 100px);
+  background-color: var(--violet);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin: 50px 80px;
+  position: relative;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.content {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.content p {
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.content a {
+  background: white;
+  color: var(--violet);
+  text-decoration: none;
+  padding: 15px 60px;
+  border-radius: 30px;
+  font-weight: 400;
+  display: block;
+  width: fit-content;
+  margin-top: 25px;
+}
+
+.content a:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  transition: 0.3s;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  display: flex;
+  gap: 20px;
+}
+
+.social a {
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.social a:hover {
+  color: var(--soft-magenta);
+  transition: 0.3s;
+  border-color: var(--soft-magenta);
+}
+
+footer {
+  position: absolute;
+  bottom: 00px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+}
+
+@media (max-width: 1240px) {
+  .content img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin: 40px 25px;
+    background-image: url(../images/bg-mobile.svg);
+    background-size: contain;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+    gap: 40px;
+  }
+  .content h1 {
+    font-size: 1.9em;
+  }
+  .content a {
+    margin: 20px auto 0px;
+  }
+  .social {
+    position: static;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  footer {
+    display: none;
+  }
+}
